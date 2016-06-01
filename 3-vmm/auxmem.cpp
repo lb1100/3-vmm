@@ -1,5 +1,5 @@
 #include "auxmem.h"
-#include "global.h"
+
 auxMem::auxMem() {
     if ((memFile = fopen(AUX_FILE, "r+")) < 0){
         error_sys("Aux file open failed.");
@@ -23,4 +23,3 @@ void auxMem::readPage(unsigned char* content, unsigned int addr) {
         error_sys("fread failed.");
     };
 }
-

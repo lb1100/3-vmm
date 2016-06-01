@@ -1,8 +1,7 @@
 #ifndef AUXMEM_H
 #define AUXMEM_H
-
+#include "global.h"
 #include <stdio.h>
-
 class auxMem {
 private:
 	FILE *memFile;
