@@ -1,7 +1,6 @@
 #ifndef HANDLER_H
 #define HANDLER_H
 
-#include "mmu.h"
 #include "actmem.h"
 #include "auxmem.h"
 
