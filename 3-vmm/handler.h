@@ -8,10 +8,8 @@
 class handler {
     auxMem &auxmem;
     actMem &actmem;
-    mmu &mmu;
 public:
     handler(auxMem&,actMem&);
-    void setMMU(mmu&);
     void pageFault(unsigned int vaddr);
     void freePGD(unsigned int pid);
     void switchPGD(unsigned int pid);
