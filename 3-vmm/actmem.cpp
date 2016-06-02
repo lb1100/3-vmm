@@ -4,14 +4,14 @@ actMem::actMem(){
 }
 
 void actMem::writePage(unsigned char* content, unsigned int addr){
-    unsigned char *ptr = Mem + addr;
+    unsigned char *ptr = Mem + addr*PAGE_SIZE;
     for(int i=0;i<PAGE_SIZE;i++){
         *(ptr++) = *(content++);
     }
 }
 
 void actMem::readPage(unsigned char* content, unsigned int addr){
-    unsigned char *ptr = Mem + addr;
+    unsigned char *ptr = Mem + addr*PAGE_SIZE;
     for(int i=0;i<PAGE_SIZE;i++){
         *(content++) = *(ptr++);
     }
