@@ -5,8 +5,11 @@
 #include "auxmem.h"
 
 class handler {
+private:
     auxMem &auxmem;
     actMem &actmem;
+    
+    unsigned int allocPTE();
 public:
     handler(auxMem&,actMem&);
     void pageFault(unsigned int vaddr,unsigned int CR3);
