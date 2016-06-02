@@ -9,7 +9,7 @@ class handler {
     actMem &actmem;
 public:
     handler(auxMem&,actMem&);
-    void pageFault(unsigned int vaddr);
+    void pageFault(unsigned int vaddr,unsigned int CR3);
     void freePGD(unsigned int pid);
     void switchPGD(unsigned int pid);
     void allocPGD(unsigned int pid);
