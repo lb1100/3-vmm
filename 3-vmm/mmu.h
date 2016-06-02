@@ -1,12 +1,16 @@
 #ifndef MMU_H
 #define MMU_H
 
+#include "actmem.h"
+#include "handler.h"
+
 class mmu {
 private:
     actMem &actmem;
+    handler &hand;
     unsigned int CR3;
 public:
-    mmu(actMem&);
+    mmu(actMem&,handler&);
     
     unsigned int readInt(unsigned int vaddr);
     void writeInt(unsigned int vaddr,unsigned int val);
