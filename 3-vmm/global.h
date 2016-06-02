@@ -6,6 +6,8 @@
 #define ACTMEM_SIZE (256*1048576)
 #define AUXMEM_SIZE (1024*1048576)
 
+#define ACT_PAGENUM (ACTMEM_SIZE/PAGE_SIZE)
+
 #define AUX_FILE "auxMem"
 
 void error_sys(const char* msg);
