@@ -9,11 +9,7 @@ private:
     auxMem &auxmem;
     actMem &actmem;
     
-    unsigned int allocPage();
-    unsigned int physPageInfo[ACT_PAGENUM];
-    unsigned int pageParam[ACT_PAGENUM];
-    unsigned int pgd[1024];
-    unsigned int pid;
+    unsigned int allocPTE();
 public:
     handler(auxMem&,actMem&);
     void pageFault(unsigned int vaddr,unsigned int CR3);
